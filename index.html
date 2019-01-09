@@ -70,9 +70,11 @@ var HttpClient = function() {
               {
 
                 var marker = L.marker([response1.user[i].lon, response1.user[i].lat] ,{ icon: obs04Icon });
+                marker.bindPopup('類別:'+response1.user[i].type+'<br>活動名稱:'+response1.user[i].areaname+'<br>'
+                +'座標:'+response1.user[i].lon+','+response1.user[i].lat);
                 marker.addTo(map);
             //     var marker = L.marker([response1.user[i].lon, response1.user[i].lat] ,{ icon: obs04Icon });
-            // marker.bindPopup('負責人'+response1.user[i].姓名+'\n\r負責區域:'+response1.user[i].負責區域+'\n\r');
+            // 
             // marker.addTo(map);
               }
 
